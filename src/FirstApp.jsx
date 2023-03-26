@@ -1,9 +1,6 @@
+import PropTypes from 'prop-types'
 
 export const FirstApp = ({ nombre, apellido,cantPerros, danna, daenarys }) => {
-
-  console.log(nombre)
-  console.log(apellido)
-
   return (
     <>
     <h1>Hola soy {nombre}</h1>
@@ -12,4 +9,13 @@ export const FirstApp = ({ nombre, apellido,cantPerros, danna, daenarys }) => {
     <h3>se llaman {danna} y {daenarys}</h3>
     </>
   )
+}
+
+
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  apellido: PropTypes.string.isRequired,
+  cantPerros: PropTypes.number.isRequired,
+  danna: PropTypes.string.isRequired,
+  daenarys: PropTypes.string.isRequired
 }
