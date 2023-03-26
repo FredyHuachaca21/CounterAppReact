@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types'
 
-export const FirstApp = ({ nombre, apellido,cantPerros, danna, daenarys }) => {
+export const FirstApp = ({ 
+  nombre = 'Edgar', 
+  apellido = "Pezúa",
+  cantPerros = 2, 
+  danna = 'danna <3', 
+  daenarys = 'daenarys <3' }) => {
   return (
     <>
     <h1>Hola soy {nombre}</h1>
@@ -13,9 +18,17 @@ export const FirstApp = ({ nombre, apellido,cantPerros, danna, daenarys }) => {
 
 
 FirstApp.propTypes = {
-  title: PropTypes.string.isRequired,
+  nombre: PropTypes.string,
   apellido: PropTypes.string.isRequired,
   cantPerros: PropTypes.number.isRequired,
   danna: PropTypes.string.isRequired,
   daenarys: PropTypes.string.isRequired
+}
+
+FirstApp.defaultProps = {
+  nombre: 'No hay nombre',
+  apellido: 'No hay apellido',
+  cantPerros: 0,
+  danna: 'No hay danna',
+  daenarys: 'No hay daenarys',
 }
