@@ -1,29 +1,15 @@
 
-const cliente = {
-  nombre: 'Fredy',
-  apellido: 'Huachaca',
-  telefono: '+51 9643156473'
-}
+export const FirstApp = ({ nombre, apellido,cantPerros, danna, daenarys }) => {
 
-export const FirstApp = () => {
-  const nombre = 'Fredy'
-  const ahora = new Date();
+  console.log(nombre)
+  console.log(apellido)
 
-const opciones = {
-  dateStyle: 'short',
-  timeStyle: 'short',
-};
-
-const fechaYHora = ahora.toLocaleString(undefined, opciones);
-console.log(fechaYHora);
   return (
     <>
-    <h1>{nombre}</h1>
-    <h2>Huachaca</h2>
-    <h3>fecha y hora: {fechaYHora}</h3>
-
-    <code>{JSON.stringify( cliente )}</code>
-
+    <h1>Hola soy {nombre}</h1>
+    <h2>y mi apellido es: {apellido} </h2>
+    <h3>tengo {cantPerros} Mascotas</h3>
+    <h3>se llaman {danna} y {daenarys}</h3>
     </>
   )
 }
